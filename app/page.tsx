@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaLightbulb, FaHandshake, FaCity, FaClipboardCheck, FaUsers, FaChartBar } from "react-icons/fa";
+import { FaLightbulb, FaHandshake, FaCity, FaClipboardCheck, FaUsers, FaChartBar, FaMapMarkerAlt, FaPlay } from "react-icons/fa";
 import MainLayout from "../components/layout/MainLayout";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/ui/Card";
 import { Button } from "../components/ui/Button";
@@ -9,64 +9,82 @@ export default function Home() {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-black py-20 sm:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary-500 to-primary-700 py-20 sm:py-32">
         {/* Background elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-neutral-900"></div>
-          <div className="absolute top-0 left-0 w-full h-full opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(101,70,235,0.3),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(0,200,255,0.3),transparent_50%)]"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-500 rounded-full opacity-5 blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary-500 to-primary-700"></div>
+          <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-[radial-gradient(circle_at_top_right,rgba(255,107,53,0.3),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.3),transparent_50%)]"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white rounded-full opacity-5 blur-3xl"></div>
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 opacity-10" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+            backgroundSize: '20px 20px'
+          }}></div>
         </div>
         
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex flex-col items-center text-center mb-16 md:mb-24">
-            <div className="inline-flex items-center px-4 py-2 rounded-full border border-neutral-800 bg-neutral-900/50 backdrop-blur-sm mb-8">
-              <span className="inline-block w-2 h-2 rounded-full bg-primary-500 mr-2 animate-pulse"></span>
-              <span className="text-sm font-medium text-neutral-300">Transforming Civic Engagement</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm mb-8">
+              <span className="inline-block w-2 h-2 rounded-full bg-accent-500 mr-2 animate-pulse"></span>
+              <span className="text-sm font-medium text-white">Civic Engagement Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white max-w-4xl mb-6">
-              <span className="text-gradient text-gradient-blue-purple">Civic Connect</span> for
-              <span className="block">Smarter Communities</span>
+              Make Your City <span className="text-secondary-400">Better</span>, Together
             </h1>
             
-            <p className="mt-6 text-lg md:text-xl text-neutral-400 max-w-2xl">
-              Our AI-powered platform bridges citizens and government, enabling seamless issue reporting, transparent tracking, and collaborative problem-solving.  
+            <p className="mt-6 text-lg md:text-xl text-white/90 max-w-2xl">
+              Report civic issues in seconds, track progress in real-time, and be part of the solution in your community.
             </p>
             
             <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-              <Button size="lg" className="w-full sm:w-auto px-8 py-6 text-base font-medium shadow-glow-primary bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-500 hover:to-accent-500 transition-all">
-                Get Started
+              <Button size="lg" className="w-full sm:w-auto px-8 py-6 text-base font-medium bg-accent-500 hover:bg-accent-600 text-white rounded-lg shadow-lg transition-all flex items-center gap-2">
+                <FaMapMarkerAlt className="w-5 h-5" />
+                Report an Issue
               </Button>
-              <Link href="/routes/services" className="w-full sm:w-auto px-8 py-6 text-base font-medium text-white border border-neutral-800 rounded-md hover:bg-neutral-800/50 transition-colors flex items-center justify-center gap-2">
-                Learn more <span aria-hidden="true" className="ml-1">→</span>
+              <Link href="/routes/services" className="w-full sm:w-auto px-8 py-6 text-base font-medium text-white border border-white/30 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+                <FaPlay className="w-5 h-5" />
+                See How It Works
               </Link>
+            </div>
+            
+            {/* Community proof */}
+            <div className="mt-12 flex items-center gap-4">
+              <div className="flex -space-x-2">
+                {[1,2,3,4].map((i) => (
+                  <div key={i} className="w-10 h-10 rounded-full bg-white/20 border-2 border-white flex items-center justify-center text-white font-semibold text-sm">
+                    {i}
+                  </div>
+                ))}
+              </div>
+              <span className="text-white/80 font-medium">5,000+ active community members</span>
             </div>
           </div>
           
           {/* Feature highlights */}
           <div className="relative mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 hover:border-primary-500/50 transition-all group">
-              <div className="w-12 h-12 rounded-lg bg-primary-900/50 flex items-center justify-center mb-4 group-hover:bg-primary-800/50 transition-colors">
-                <FaCity className="w-6 h-6 text-primary-400" />
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:border-accent-500/50 transition-all group">
+              <div className="w-12 h-12 rounded-lg bg-accent-500/20 flex items-center justify-center mb-4 group-hover:bg-accent-500/30 transition-colors">
+                <FaCity className="w-6 h-6 text-accent-500" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Smart City Integration</h3>
-              <p className="text-neutral-400">Connect with city services and infrastructure for real-time updates and reporting.</p>
+              <p className="text-white/80">Connect with city services and infrastructure for real-time updates and reporting.</p>
             </div>
             
-            <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 hover:border-accent-500/50 transition-all group">
-              <div className="w-12 h-12 rounded-lg bg-accent-900/50 flex items-center justify-center mb-4 group-hover:bg-accent-800/50 transition-colors">
-                <FaClipboardCheck className="w-6 h-6 text-accent-400" />
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:border-secondary-500/50 transition-all group">
+              <div className="w-12 h-12 rounded-lg bg-secondary-500/20 flex items-center justify-center mb-4 group-hover:bg-secondary-500/30 transition-colors">
+                <FaClipboardCheck className="w-6 h-6 text-secondary-500" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Issue Tracking</h3>
-              <p className="text-neutral-400">Monitor the status of reported issues with transparent updates throughout resolution.</p>
+              <p className="text-white/80">Monitor the status of reported issues with transparent updates throughout resolution.</p>
             </div>
             
-            <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 hover:border-secondary-500/50 transition-all group">
-              <div className="w-12 h-12 rounded-lg bg-secondary-900/50 flex items-center justify-center mb-4 group-hover:bg-secondary-800/50 transition-colors">
-                <FaUsers className="w-6 h-6 text-secondary-400" />
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:border-primary-500/50 transition-all group">
+              <div className="w-12 h-12 rounded-lg bg-primary-500/20 flex items-center justify-center mb-4 group-hover:bg-primary-500/30 transition-colors">
+                <FaUsers className="w-6 h-6 text-primary-500" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Community Collaboration</h3>
-              <p className="text-neutral-400">Work together with neighbors and officials to solve community challenges.</p>
+              <p className="text-white/80">Work together with neighbors and officials to solve community challenges.</p>
             </div>
           </div>
           

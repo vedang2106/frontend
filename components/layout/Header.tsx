@@ -27,18 +27,18 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-40 w-full transition-all duration-300 ${scrolled ? 'bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md shadow-md' : 'bg-transparent'}`}>
+    <header className="sticky top-0 z-40 w-full bg-white shadow-lg border-b border-gray-200">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 px-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-2">
             <span className="sr-only">Civic Connect</span>
-            <h1 className="text-2xl font-bold text-gradient text-gradient-blue-purple">Civic Connect</h1>
+            <h1 className="text-2xl font-bold text-gray-900">Civic Connect</h1>
           </Link>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md p-2 text-neutral-700 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-white transition-all"
+            className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-all"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -50,14 +50,14 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="relative text-sm font-medium leading-6 text-neutral-800 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400 transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:scale-x-0 after:bg-primary-500 dark:after:bg-primary-400 after:transition-transform hover:after:scale-x-100 py-2"
+              className="relative text-sm font-medium leading-6 text-gray-700 hover:text-gray-900 transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:scale-x-0 after:bg-blue-500 after:transition-transform hover:after:scale-x-100 py-2"
             >
               {item.name}
             </Link>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="/routes/services" className="text-sm font-medium leading-6 text-white bg-gradient-to-r from-primary-500 to-accent-500 px-5 py-2 rounded-md hover:from-primary-600 hover:to-accent-600 transition-all shadow-md">
+          <Link href="/routes/services" className="text-sm font-medium leading-6 text-white bg-gradient-to-r from-blue-500 to-green-500 px-5 py-2 rounded-md hover:from-blue-600 hover:to-green-600 transition-all shadow-md">
             Get Started <span aria-hidden="true" className="ml-1">&rarr;</span>
           </Link>
         </div>
@@ -71,16 +71,16 @@ export default function Header() {
           transition={{ duration: 0.2 }}
           className="lg:hidden fixed inset-0 z-50"
         >
-          <div className="fixed inset-0 bg-black/25" onClick={() => setMobileMenuOpen(false)} />
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-neutral-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-neutral-200 dark:sm:ring-neutral-800 shadow-xl">
+          <div className="fixed inset-0 bg-gray-500/25" onClick={() => setMobileMenuOpen(false)} />
+          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-200 shadow-xl">
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center gap-2">
                 <span className="sr-only">Civic Connect</span>
-                <h2 className="text-xl font-bold text-gradient text-gradient-blue-purple">Civic Connect</h2>
+                <h2 className="text-xl font-bold text-gray-900">Civic Connect</h2>
               </Link>
               <button
                 type="button"
-                className="rounded-md p-2 text-neutral-700 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-white transition-all"
+                className="rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-all"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
@@ -88,13 +88,13 @@ export default function Header() {
               </button>
             </div>
             <div className="mt-8 flow-root">
-              <div className="-my-6 divide-y divide-neutral-200 dark:divide-neutral-800">
+              <div className="-my-6 divide-y divide-gray-200">
                 <div className="space-y-1 py-6">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="block rounded-lg px-4 py-3 text-base font-medium leading-7 text-neutral-700 hover:bg-neutral-50 hover:text-primary-600 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-primary-400 transition-all"
+                      className="block rounded-lg px-4 py-3 text-base font-medium leading-7 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-all"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -104,7 +104,7 @@ export default function Header() {
                 <div className="py-6">
                   <Link
                     href="/routes/services"
-                    className="block rounded-lg px-4 py-3 text-base font-medium leading-7 text-white bg-gradient-to-r from-primary-500 to-accent-500 hover:from-primary-600 hover:to-accent-600 transition-all shadow-md text-center"
+                    className="block rounded-lg px-4 py-3 text-base font-medium leading-7 text-white bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 transition-all shadow-md text-center"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Get Started

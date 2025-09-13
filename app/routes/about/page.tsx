@@ -1,68 +1,112 @@
 import MainLayout from "../../../components/layout/MainLayout";
+import { FaLightbulb, FaShieldAlt, FaUsers, FaHeart, FaRocket, FaGlobe } from "react-icons/fa";
 
 export default function AboutPage() {
   return (
     <MainLayout>
-      <div className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-indigo-600">About Us</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Our Mission and Vision
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary-500 to-primary-700 py-20 sm:py-32">
+        {/* Background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary-500 to-primary-700"></div>
+          <div className="absolute top-0 left-0 w-full h-full opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(255,107,53,0.3),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.3),transparent_50%)]"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white rounded-full opacity-5 blur-3xl"></div>
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 opacity-10" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+            backgroundSize: '20px 20px'
+          }}></div>
+        </div>
+        
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center mb-16 md:mb-24">
+            <div className="inline-flex items-center px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm mb-8">
+              <span className="inline-block w-2 h-2 rounded-full bg-accent-500 mr-2 animate-pulse"></span>
+              <span className="text-sm font-medium text-white">About Civic Connect</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white max-w-4xl mb-6">
+              <span className="text-gradient text-gradient-blue-orange">Our Mission</span> and
+              <span className="block">Vision</span>
+            </h1>
+            
+            <p className="mt-6 text-lg md:text-xl text-white/90 max-w-2xl">
+              Civic Connect is dedicated to empowering communities through technology, making civic engagement accessible to all citizens and fostering transparent, collaborative governance.
             </p>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Civic Connect is dedicated to empowering communities through technology, making civic engagement accessible to all citizens.
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="bg-gradient-to-br from-primary-500 to-primary-700 py-24 sm:py-32 relative overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary-500 to-primary-700"></div>
+          <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-[radial-gradient(ellipse_at_center,rgba(255,107,53,0.15),transparent_50%)]"></div>
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 opacity-10" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+            backgroundSize: '20px 20px'
+          }}></div>
+        </div>
+        
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center mb-20">
+            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Building <span className="text-gradient text-gradient-blue-orange">Better Communities</span>
+            </h2>
+            <p className="mt-6 text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+              We believe that technology can bridge the gap between citizens and their local governments, creating more responsive, transparent, and effective civic systems.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-              <div className="relative pl-16">
-                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
-                  </svg>
+              <div className="bg-white/90 backdrop-blur-sm border border-white/20 rounded-xl p-8 hover:border-accent-500/50 transition-all group relative overflow-hidden shadow-lg">
+                <div className="absolute -right-20 -top-20 w-40 h-40 bg-accent-500/20 rounded-full blur-2xl group-hover:bg-accent-500/30 transition-all duration-700"></div>
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-accent-500/20 text-accent-500 group-hover:bg-accent-500/30 transition-colors relative mb-6">
+                  <FaLightbulb className="h-7 w-7" />
                 </div>
-                <div className="text-base leading-7">
-                  <h3 className="font-semibold text-gray-900">Our Story</h3>
+                <div className="text-base leading-7 relative">
+                  <h3 className="font-semibold text-gray-800 text-xl mb-4">Our Story</h3>
                   <p className="mt-2 text-gray-600">
                     Founded in 2023, Civic Connect began with a simple idea: to bridge the gap between citizens and their local governments. We believe that technology can make civic engagement more accessible, transparent, and effective.
                   </p>
                 </div>
               </div>
-              <div className="relative pl-16">
-                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-                  </svg>
+              
+              <div className="bg-white/90 backdrop-blur-sm border border-white/20 rounded-xl p-8 hover:border-secondary-500/50 transition-all group relative overflow-hidden shadow-lg">
+                <div className="absolute -right-20 -top-20 w-40 h-40 bg-secondary-500/20 rounded-full blur-2xl group-hover:bg-secondary-500/30 transition-all duration-700"></div>
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-secondary-500/20 text-secondary-500 group-hover:bg-secondary-500/30 transition-colors relative mb-6">
+                  <FaShieldAlt className="h-7 w-7" />
                 </div>
-                <div className="text-base leading-7">
-                  <h3 className="font-semibold text-gray-900">Our Mission</h3>
+                <div className="text-base leading-7 relative">
+                  <h3 className="font-semibold text-gray-800 text-xl mb-4">Our Mission</h3>
                   <p className="mt-2 text-gray-600">
                     Our mission is to empower communities by providing tools that facilitate meaningful civic engagement, promote transparency in local governance, and foster collaboration between citizens and their governments.
                   </p>
                 </div>
               </div>
-              <div className="relative pl-16">
-                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
-                  </svg>
+              
+              <div className="bg-white/90 backdrop-blur-sm border border-white/20 rounded-xl p-8 hover:border-primary-500/50 transition-all group relative overflow-hidden shadow-lg">
+                <div className="absolute -right-20 -top-20 w-40 h-40 bg-primary-500/20 rounded-full blur-2xl group-hover:bg-primary-500/30 transition-all duration-700"></div>
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary-500/20 text-primary-500 group-hover:bg-primary-500/30 transition-colors relative mb-6">
+                  <FaHeart className="h-7 w-7" />
                 </div>
-                <div className="text-base leading-7">
-                  <h3 className="font-semibold text-gray-900">Our Values</h3>
+                <div className="text-base leading-7 relative">
+                  <h3 className="font-semibold text-gray-800 text-xl mb-4">Our Values</h3>
                   <p className="mt-2 text-gray-600">
                     We are guided by our commitment to accessibility, inclusivity, transparency, and innovation. We believe that everyone should have the opportunity to participate in civic life and contribute to their community.
                   </p>
                 </div>
               </div>
-              <div className="relative pl-16">
-                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
-                  </svg>
+              
+              <div className="bg-white/90 backdrop-blur-sm border border-white/20 rounded-xl p-8 hover:border-accent-500/50 transition-all group relative overflow-hidden shadow-lg">
+                <div className="absolute -right-20 -top-20 w-40 h-40 bg-accent-500/20 rounded-full blur-2xl group-hover:bg-accent-500/30 transition-all duration-700"></div>
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-accent-500/20 text-accent-500 group-hover:bg-accent-500/30 transition-colors relative mb-6">
+                  <FaUsers className="h-7 w-7" />
                 </div>
-                <div className="text-base leading-7">
-                  <h3 className="font-semibold text-gray-900">Our Team</h3>
+                <div className="text-base leading-7 relative">
+                  <h3 className="font-semibold text-gray-800 text-xl mb-4">Our Team</h3>
                   <p className="mt-2 text-gray-600">
                     Our diverse team brings together expertise in technology, civic engagement, and community development. We are passionate about creating positive change in communities across the country.
                   </p>
@@ -71,7 +115,43 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 sm:py-32 bg-gradient-to-br from-primary-500 to-primary-700 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary-500 to-primary-700"></div>
+          <div className="absolute top-0 left-0 w-full h-full opacity-30 bg-[radial-gradient(ellipse_at_center,rgba(255,107,53,0.15),transparent_50%)]"></div>
+        </div>
+        
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl px-8 py-20 sm:px-16 overflow-hidden relative">
+            {/* Decorative elements */}
+            <div className="absolute -top-24 -right-24 w-64 h-64 bg-accent-500 rounded-full opacity-20 blur-3xl"></div>
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary-500 rounded-full opacity-20 blur-3xl"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-accent-500/10 to-secondary-500/10"></div>
+            
+            <div className="relative text-center">
+              <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+                Ready to transform <span className="text-gradient text-gradient-blue-orange">civic engagement</span>?
+              </h2>
+              <p className="mx-auto mt-6 max-w-2xl text-lg sm:text-xl text-white/90">
+                Join thousands of citizens who are using our platform to improve their communities and make their voices heard.
+              </p>
+              
+              <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
+                <button className="w-full sm:w-auto bg-white hover:bg-neutral-100 text-neutral-900 font-medium px-8 py-6 text-lg rounded-xl shadow-glow-white hover:shadow-glow-white-lg transition-all duration-300">
+                  Get Started Today
+                </button>
+                <a href="/routes/contact" className="group flex items-center text-lg font-medium text-white hover:text-primary-400 transition-colors">
+                  Learn More 
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </MainLayout>
   );
 }

@@ -1,127 +1,186 @@
 import MainLayout from "../../../components/layout/MainLayout";
 import { Button } from "../../../components/ui/Button";
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
 
 export default function ContactPage() {
   return (
     <MainLayout>
-      <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact Us</h2>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
-            Have questions or feedback? We&apos;d love to hear from you.
-          </p>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary-500 to-primary-700 py-20 sm:py-32">
+        {/* Background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary-500 to-primary-700"></div>
+          <div className="absolute top-0 left-0 w-full h-full opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(255,107,53,0.3),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.3),transparent_50%)]"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white rounded-full opacity-5 blur-3xl"></div>
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 opacity-10" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+            backgroundSize: '20px 20px'
+          }}></div>
         </div>
-        <form className="mx-auto mt-16 max-w-xl sm:mt-20">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-            <div>
-              <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
-                First name
-              </label>
-              <div className="mt-2.5">
-                <input
-                  type="text"
-                  name="first-name"
-                  id="first-name"
-                  autoComplete="given-name"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
+        
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center mb-16 md:mb-24">
+            <div className="inline-flex items-center px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm mb-8">
+              <span className="inline-block w-2 h-2 rounded-full bg-accent-500 mr-2 animate-pulse"></span>
+              <span className="text-sm font-medium text-white">Get in Touch</span>
             </div>
-            <div>
-              <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
-                Last name
-              </label>
-              <div className="mt-2.5">
-                <input
-                  type="text"
-                  name="last-name"
-                  id="last-name"
-                  autoComplete="family-name"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-            <div className="sm:col-span-2">
-              <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
-                Email
-              </label>
-              <div className="mt-2.5">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  autoComplete="email"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-            <div className="sm:col-span-2">
-              <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
-                Phone number
-              </label>
-              <div className="mt-2.5">
-                <input
-                  type="tel"
-                  name="phone-number"
-                  id="phone-number"
-                  autoComplete="tel"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-            <div className="sm:col-span-2">
-              <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
-                Message
-              </label>
-              <div className="mt-2.5">
-                <textarea
-                  name="message"
-                  id="message"
-                  rows={4}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  defaultValue={""}
-                />
-              </div>
-            </div>
+            
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white max-w-4xl mb-6">
+              <span className="text-gradient text-gradient-blue-orange">Contact</span> Us
+            </h1>
+            
+            <p className="mt-6 text-lg md:text-xl text-white/90 max-w-2xl">
+              Have questions or feedback? We&apos;d love to hear from you. Get in touch with our team and let&apos;s work together to improve your community.
+            </p>
           </div>
-          <div className="mt-10">
-            <Button type="submit" className="w-full">
-              Send message
-            </Button>
-          </div>
-        </form>
+        </div>
+      </section>
 
-        <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="rounded-2xl bg-gray-50 p-8">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-              <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
+      {/* Main Content */}
+      <section className="bg-neutral-950 py-24 sm:py-32 relative overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-neutral-900"></div>
+          <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-[radial-gradient(ellipse_at_center,rgba(101,70,235,0.15),transparent_50%)]"></div>
+        </div>
+        
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            {/* Contact Form */}
+            <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Send us a message</h3>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2">
+                  <div>
+                    <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-neutral-300 mb-2">
+                      First name
+                    </label>
+                    <input
+                      type="text"
+                      name="first-name"
+                      id="first-name"
+                      autoComplete="given-name"
+                      className="block w-full rounded-lg bg-neutral-800 border border-neutral-700 px-4 py-3 text-white placeholder:text-neutral-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                      placeholder="Enter your first name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-neutral-300 mb-2">
+                      Last name
+                    </label>
+                    <input
+                      type="text"
+                      name="last-name"
+                      id="last-name"
+                      autoComplete="family-name"
+                      className="block w-full rounded-lg bg-neutral-800 border border-neutral-700 px-4 py-3 text-white placeholder:text-neutral-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                      placeholder="Enter your last name"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-semibold leading-6 text-neutral-300 mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    autoComplete="email"
+                    className="block w-full rounded-lg bg-neutral-800 border border-neutral-700 px-4 py-3 text-white placeholder:text-neutral-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-neutral-300 mb-2">
+                    Phone number
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone-number"
+                    id="phone-number"
+                    autoComplete="tel"
+                    className="block w-full rounded-lg bg-neutral-800 border border-neutral-700 px-4 py-3 text-white placeholder:text-neutral-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-semibold leading-6 text-neutral-300 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows={4}
+                    className="block w-full rounded-lg bg-neutral-800 border border-neutral-700 px-4 py-3 text-white placeholder:text-neutral-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none"
+                    placeholder="Tell us about your inquiry or feedback..."
+                    defaultValue={""}
+                  />
+                </div>
+                <div>
+                  <Button type="submit" className="w-full bg-gradient-to-r from-primary-500 to-accent-500 hover:from-primary-600 hover:to-accent-600 text-white font-medium py-3 px-6 rounded-lg transition-all">
+                    <FaPaperPlane className="w-4 h-4 mr-2" />
+                    Send message
+                  </Button>
+                </div>
+              </form>
             </div>
-            <h3 className="mt-4 text-base font-semibold leading-7 text-gray-900">Email</h3>
-            <p className="mt-2 text-gray-600">contact@civicconnect.com</p>
-          </div>
-          <div className="rounded-2xl bg-gray-50 p-8">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-              <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
+
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Get in touch</h3>
+                <p className="text-neutral-400 text-lg">
+                  We&apos;re here to help and answer any questions you might have. We look forward to hearing from you!
+                </p>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 hover:border-primary-500/50 transition-all group">
+                  <div className="flex items-start">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-900/50 text-primary-400 group-hover:bg-primary-800/50 transition-colors">
+                      <FaEnvelope className="h-6 w-6" />
+                    </div>
+                    <div className="ml-4">
+                      <h4 className="text-lg font-semibold text-white">Email</h4>
+                      <p className="text-neutral-400 mt-1">contact@civicconnect.com</p>
+                      <p className="text-sm text-neutral-500 mt-1">We&apos;ll get back to you within 24 hours</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 hover:border-accent-500/50 transition-all group">
+                  <div className="flex items-start">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent-900/50 text-accent-400 group-hover:bg-accent-800/50 transition-colors">
+                      <FaPhone className="h-6 w-6" />
+                    </div>
+                    <div className="ml-4">
+                      <h4 className="text-lg font-semibold text-white">Phone</h4>
+                      <p className="text-neutral-400 mt-1">+1 (555) 123-4567</p>
+                      <p className="text-sm text-neutral-500 mt-1">Mon-Fri 9AM-6PM EST</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 rounded-xl p-6 hover:border-secondary-500/50 transition-all group">
+                  <div className="flex items-start">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary-900/50 text-secondary-400 group-hover:bg-secondary-800/50 transition-colors">
+                      <FaMapMarkerAlt className="h-6 w-6" />
+                    </div>
+                    <div className="ml-4">
+                      <h4 className="text-lg font-semibold text-white">Office</h4>
+                      <p className="text-neutral-400 mt-1">123 Main Street, Suite 456</p>
+                      <p className="text-neutral-400">New Delhi, India 110001</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 className="mt-4 text-base font-semibold leading-7 text-gray-900">Phone</h3>
-            <p className="mt-2 text-gray-600">+1 (555) 123-4567</p>
-          </div>
-          <div className="rounded-2xl bg-gray-50 p-8">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-              <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <h3 className="mt-4 text-base font-semibold leading-7 text-gray-900">Office</h3>
-            <p className="mt-2 text-gray-600">123 Main Street, Suite 456<br />New Delhi, India 110001</p>
           </div>
         </div>
-      </div>
+      </section>
+
     </MainLayout>
   );
 }
